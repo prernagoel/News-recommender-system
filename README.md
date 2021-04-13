@@ -48,18 +48,9 @@ These systems recommend items with similar content from the ones the user liked 
 past. In this type of RS, the clickstream based user profile (up) represents the user interests.
 We have implemented the following two approaches for content-based system :
 
-• ​ Tfidf based approach ​ - A tfidf_matrix containing each word and its TF-IDF score with regard
-to each document was generated and the cosine similarity of the whole corpus with user read
-articles was further calculated. Thus, each new item is compared to user profile, and the most
-similar articles are recommended. It minimizes the cold start problem: new items can be
-suggested before being rated by a substantial number of users as opposed to collaborative
-filtering.
+• Tfidf based approach 
 
-•​ Topic Modeling based approach​ - We used the LDA (Latent Dirichlet Allocation) model on
-the cleaned/preprocessed news articles. The articles were represented in terms of Topic Vector
-and users in terms of the Topic Vector of read articles. We then calculated the similarity of
-cosines between read articles topic vector and total articles topic vector and give
-recommendations based on the same.
+• Topic Modeling based approach
 
 ### Collaborative recommendation systems
 
@@ -72,11 +63,6 @@ history. We cannot use collaborative recommenders in the beginning as there won'
 significant user information to perform the recommendation.
 We have used the following two approaches for user-based collaborative filtering:
 
-• Collaborative filtering based on user similarity score ​ - We created a users vs document
-rating matrix and use it to find the cosine similarity between different users. We estimate the
-unknown rating by taking weighted average and then recommend 10 articles based on the
-estimated ratings.
-• ​ Collaborative filtering based on matrix decomposition/SVD ​ - We created the user vs article
-rating matrix and reduced its dimensions using Singular Value Decomposition method. The
-user vs article matrix was then re-calculated to recommend articles based on the estimated
-ratings.
+• Collaborative filtering based on user similarity score 
+
+• Collaborative filtering based on matrix decomposition/SVD
